@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clement's Tech Haven</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #e62429;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #e62429;
+        }
+        .menu-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            display: none;
+        }
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background-color: #e62429;
+            margin: 6px 0;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            color: #e62429;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #4ac7ff;
+        }
+        section {
+            padding: 20px;
+            margin: 0 10%;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #1f1f1f;
+            text-align: center;
+            padding: 10px;
+            border-top: 3px solid #e62429;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .project {
+            background-color: #2a2a2a;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        .project h3 {
+            color: #4ac7ff;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form input, .contact-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #4ac7ff;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+        .contact-form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e62429;
+            color: #ffffff;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #4ac7ff;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            if (nav.style.display === 'block') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Clement's Tech Haven</h1>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hey, I'm Clement. I’m all about tech, DIY projects, and exploring more. I love diving into new challenges and creating innovative solutions. Whether it’s building something from scratch or modifying existing tech, I’m always up for the task. Stick around to see what I’m working on and get inspired!</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>DIY Perks Inspired Project</h3>
+            <p>Check out this awesome project inspired by DIY Perks. It’s all about making tech stuff on a budget and getting creative! From custom PC builds to unique gadgets, this project showcases how you can achieve great results without breaking the bank.</p>
+        </div>
+        <div class="project">
+            <h3>Hacksmith Inspired Project</h3>
+            <p>Inspired by Hacksmith, this project brings sci-fi ideas to life. From building superhero gear to recreating movie props, these projects push the boundaries of what’s possible. Join me in turning imagination into reality and making some truly epic creations.</p>
+        </div>
+        <div class="project">
+            <h3>TikTok Jarvis Project</h3>
+            <p>This project is inspired by the guy on TikTok who made Jarvis. Bringing AI to everyday life, it’s a blend of fun and tech. Imagine having your own personal assistant that can control your home, manage your schedule, and even have conversations with you. It’s all about integrating AI into our daily routines.</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 NGOMASH.co</p>
+    </footer>
+</body>
+</html>
